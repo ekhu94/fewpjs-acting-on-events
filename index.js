@@ -6,15 +6,15 @@ const moveDodgerLeft = () => {
     let leftNums = dodger.style.left.replace('px', '');
     let left = parseInt(leftNums, 10);
     if (left > 0) {
-        dodger.style.left = `${left - 1}px`;
+        dodger.style.left = `${left - 10}px`;
     }
 }
 
 const moveDodgerRight = () => {
     let leftNums = dodger.style.left.replace('px', '');
     let left = parseInt(leftNums, 10);
-    if (left > 0) {
-        dodger.style.left = `${left + 1}px`;
+    if (left < game.offsetWidth - 40) {
+        dodger.style.left = `${left + 10}px`;
     }
 }
 
